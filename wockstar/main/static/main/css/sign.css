@@ -1,0 +1,221 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: white;   
+   }
+
+   *,
+*:before,
+*:after{
+    box-sizing: border-box;
+
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+p{
+    margin: 0 0 5px;
+}
+
+   .header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #434343;
+
+}
+.header_inner{
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 0; 
+    margin: 0 50px;
+    align-items: center;
+}
+
+
+nav{
+    display: flex;
+    font-size: 13px;
+    font-weight: 700;
+    align-items: center;
+    
+    
+}
+.nav_link{
+    margin-left: 50px;
+    color: #fff;
+    text-decoration: none;
+    opacity: .55;
+    transition: opacity .5s linear;
+    margin: 0 90px 0 0;
+}
+.nav_linka{
+    margin-left: 50px;
+    text-decoration: none;
+    background-color: white;
+    padding: 15px 25px;
+    color: #fff;
+}
+
+.nav_linka:hover{
+    background-color: rgb(83, 82, 82);
+}
+
+.nav_link:first-child{
+    margin-left: 0;
+}
+
+.nav_link:hover {
+    opacity: 1;
+}
+
+.nav_linka:hover {
+    opacity: 2;
+}
+   .box{
+       width: 330px;
+       padding: 40px;
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       background: #191919;
+       text-align: center;
+   }
+   .box h1{
+       color: white;
+       text-transform: uppercase;
+       font-weight: 500;
+   }
+   .box input[type = "text"],.box input[type = "password"]{
+       border:0;
+       background: none;
+       display: block;
+       margin: 20px auto;
+       text-align: center;
+       border: 2px solid #3498db;
+       padding: 14px 20px;
+       width: 200px;
+       outline: none;
+       color: white;
+       border-radius: 24px;
+       transition: 0.25s;
+   
+   
+   }
+   
+   .box input[type = "text"]:focus,.box input[type = "password"]:focus{
+       width: 250px;
+       border-color: #2ecc71;
+   }
+   
+   .box input[type = "submit"]{
+       border:0;
+       background: none;
+       display: block;
+       margin: 20px auto;
+       text-align: center;
+       border: 2px solid #2ecc71;
+       padding: 14px 10px;
+       width: 200px;
+       outline: none;
+       color: white;
+       border-radius: 24px;
+       transition: 0.25s;
+       cursor: pointer;
+   }
+   
+   .box input[type = "submit"]:hover{
+       background: #2ecc71;
+   }
+   .text{
+    font-size: 25px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.footer{
+    padding-top: 150px;
+}
+.footer_inner{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px 0;
+    margin-top: 500px;
+    background-color: #434343;
+}
+
+.footer_block{
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 70px;
+    
+}
+
+.footer_text{
+    font-size: 30px;
+    margin: 10px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+.footer_text2{
+    color: black;
+    font-size: 30px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+.footer_t{
+    text-align: left;
+    font-size: 15px;
+    color: white;
+    opacity: .5;
+}
+
+.footer_textt{
+    display: flex;
+    margin-bottom: 30px;
+    color: white;
+
+}
+
+.linkf{
+    display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+}
+
+.linkf1{
+    display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+
+}
+
+.link{
+    text-align: left;
+    margin: 10px;
+    color: gray;
+    text-decoration: none;
+    opacity: .7;
+    transition: opacity .5s linear;
+}
+
+.link:hover{
+    opacity: .4;
+}
+
+.footer_copyright{
+    background-color: #2F2F2F;
+    padding: 7px 0;
+}
+
+.copyright_text{
+    text-align: center;
+    color: grey;
+    opacity: .5;
+
+}

@@ -1,0 +1,86 @@
+{% extends 'main/layout.html'%}
+
+{% load static %}
+
+{% block title %}Procedures{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'main/css/proced.css' %}">
+<section class="about" id="about">
+            <div class="container">
+                <div class="about_row">
+                    <div class="about_text">
+
+                        <h1 class="about_title">All procedures that you need</h1>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed<br> do eiusmod tempor incididunt ut labore et dolore magna<br> aliqua. Ut enim ad minim veniam</p>
+
+                    </div>
+            </div>
+        </section>
+
+        <section class="proced" id="proced">
+            <div class="container">
+                <div class="procedures_inner">
+                    <p class="procedures_t">PROCEDURES</p>
+                    <h2 class="procedures_title">Special Offers</h2>
+                    <h3 class="procedures_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br>incididunt ut labore et dolore magna aliqua.</h3>
+                </div>
+                <div class="procedures">
+
+                    <div class="procedures_item">
+                        <img height="220px" width="300px" src="{% static 'main/images/5.jpg' %}">
+                        <h3 class="procedures_title2">MAKE-UP</h3>
+                    </div>
+
+                    <div class="procedures_item">
+                        <img height="220px" width="300px" src="{% static 'main/images/4.jpg' %}">
+                        <h3 class="procedures_title2">FACE MASAGE</h3>
+                    </div>
+
+                    <div class="procedures_item">
+                        <img height="220px" width="300px" src="{% static 'main/images/hair.jpg' %}">
+                        <h3 class="procedures_title2">HAIR STYLE</h3>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+            <section class="slider" id="slider">
+                <div class="all">
+                    <input checked type="radio" name="respond" id="desktop">
+                        <article id="slider">
+                                <input checked type="radio" name="slider" id="switch1">
+                                <input type="radio" name="slider" id="switch2">
+                                <input type="radio" name="slider" id="switch3">
+                                <input type="radio" name="slider" id="switch4">
+                                <input type="radio" name="slider" id="switch5">
+                            <div id="slides">
+                                <div id="overflow">
+                                    <div class="image">
+                                        <article><img src="{% static 'main/images/1.jpg' %}"></article>
+                                        <article><img src="{% static 'main/images/2.jpg' %}"></article>
+                                        <article><img src="{% static 'main/images/3.jpg' %}"></article>
+                                        <article><img src="{% static 'main/images/4.jpg' %}"></article>
+                                        <article><img src="5.jpg"></article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="controls">
+                                <label for="switch1"></label>
+                                <label for="switch2"></label>
+                                <label for="switch3"></label>
+                                <label for="switch4"></label>
+            
+                            </div>
+                            <div id="active">
+                                <label for="switch1"></label>
+                                <label for="switch2"></label>
+                                <label for="switch3"></label>
+                                <label for="switch4"></label>
+            
+                            </div>
+                        </article>
+                </div>
+            </section>
+{% endblock %}

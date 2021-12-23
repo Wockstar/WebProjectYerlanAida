@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header class="header">
+        <section>
+            <div class="header_inner">
+                <div class="header_logo">
+                    <h2 style="color: white;">BEAUTY</h2>
+                    <h2 style="color: white;">WAY</h2>
+                </div>
+
+                <nav class="nav">
+                    <a class="nav_link" href="{% url 'home' %}">HOME</a>
+                    <a class="nav_link" href="{% url 'about' %}">ABOUT</a>
+                    <a class="nav_link" href="{% url 'procedures' %}">PROCEDURES</a>
+                    <a class="nav_link" href="{% url 'services' %}">SERVICES</a>
+                    <a class="nav_link" href="{% url 'feedback' %}">FEEDBACK</a>
+                    {% if user.is_authenticated %}
+                        <div class="user-avatar ml-3">
+                            <h4>{{user.username}}</h4>
+                        </div>
+                    <p> | </p>
+                    <a class="nav_link" href="{% url 'signout' %}" style="color: #000;">LOG OUT</a>
+                    {% else %}
+                    <a class="nav_link" href="{% url 'sign' %}" style="color: #000;">LOG IN</a>
+                    {% endif %}
+                </nav>
+        </div>
+    </section>
+    </header>
+{% block content %}
+{% endblock %}
+<footer class="footer">
+    <div class="footer_inner">
+        <div class="footer_block">
+            <div class="text">
+                <h2 style="color: white;">BEAUTY</h2>
+                <h2 style="color: white;">WAY</h2>
+            </div>
+            <p class="footer_t">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Quod dicta error
+                                repellat suscipit in sit maiores</p>
+        </div>
+
+        <div class="footer_block">
+            <h3 class="footer_textt">QUICK LINKS</h3>
+            <div class="linkf">
+                <a class="link" href="{% url 'home' %}">Home</a>
+                <a class="link" href="{% url 'about' %}">About</a>
+                <a class="link" href="{% url 'procedures' %}">Procedures</a>
+                <a class="link" href="{% url 'services' %}">Services</a>
+                <a class="link" href="{% url 'feedback' %}">Feedback</a>
+                <a class="link" href="{% url 'login' %}">Login</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer_block">
+            <h3 class="footer_textt">SUPPORT</h3>
+            <div class="linkf1">
+                <a class="link" href="https://www.instagram.com/">Instagram</a>
+                <a class="link" href="https://vk.com/">VK</a>
+                <a class="link" href="https://www.facebook.com/">Facebook</a>
+                <a class="link" href="https://twitter.com/">Twitter</a>
+                <a class="link" href="https://www.tiktok.com/">Tik Tok</a>
+            </div>
+        </div>
+
+        <div class="footer_block">
+            <h3 class="footer_textt">SUBSCRIBE</h3>
+            <p class="footer_t">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Quod dicta error
+                                repellat suscipit in sit maioresipsum dolor<br>sit amet consectetur adipisicing elit.Quod dicta error
+                                repellat<br> suscipit in sit maiores</p>
+
+
+        </div>
+    </div>
+
+    <div class="footer_copyright">
+        <div class="copyright_text">Beauty Way - © 2021 All Rights Reserved</div>
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./js/scripts.js"></script>
+</body>
+</html>
